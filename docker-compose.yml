@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: ci4_canteen
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - CI_ENVIRONMENT=development
+      - DB_HOST=db
+      - DB_NAME=dbresto
+      - DB_USER=root
+      - DB_PASS=ichibi443
+
+  db:
+    image: mysql:latest
+    container_name: ci4_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ichibi443
+    ports:
+      - "3060:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
