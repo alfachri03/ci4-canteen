@@ -1,0 +1,17 @@
+body{
+    background-image: url('http://localhost:8080/assets/img/page-login/login-bgimage.jpg');    
+    background-position: center;    
+    background-size: cover;
+    height: 100%;    
+}
+.margin-auto-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.kotak{
+    background-color: #ffff;
+    height: 340px;
+    width: 800px;
+}

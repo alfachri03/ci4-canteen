@@ -1,0 +1,6 @@
+.sidebar //background seluruh sidebar
+.sidebar-nav .nav-link.collapsed // css kotak item sidebar
+body // background utama dashboard
+.card-body // background card dashboard
+.dashboard .sales-card .card-icon // background icon card dashboard
+.sidebar-nav .nav-link //background tiap menu sidebar
